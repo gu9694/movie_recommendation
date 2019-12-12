@@ -1,0 +1,7 @@
+html,body{
+    font-size: 12px;
+    font-family:"Arial";
+	background-image:url('../images/hp.jpg'); 
+    background-size:cover;
+    background-attachment:fixed;
+}

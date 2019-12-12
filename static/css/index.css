@@ -1,0 +1,36 @@
+html,body{
+    font-size: 12px;
+    font-family:"Arial";
+	/* background-image:url('../images/earth1.jpg'); */
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+#first {
+    margin-top: 0%;
+    background-image:url('../images/earth1.jpg');
+}
+
+#second {
+    margin-top: 0%;
+    background-image:url('../images/earth2.jpg');
+}
+/* .jumbotron{
+    margin-top: 0%;
+    background-image:url('../images/earth2.jpg');
+} */
+
+#first_container {
+    margin-top: 100px;
+    
+    text-align: end;
+}
+#seconde_container {
+    margin-top: 100px;
+    
+    text-align: start;
+}
+
+h1{
+    color:whitesmoke;/*字体颜色黑色*/
+    }

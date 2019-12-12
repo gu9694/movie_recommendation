@@ -1,0 +1,35 @@
+.logo{
+    width: 50px;
+}
+
+body{
+    background-color: #f3f3f3;
+}
+
+
+html,body{
+    font-size: 24px;
+    font-family:"Arial";
+	background-image:url('../images/earth2.jpg');
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+
+
+.main{
+    background: #fff;
+    opacity: 0.7;
+    width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding : 50px;
+}
+
+.poster{
+    width: 150px;
+}
+
+.caption{
+    text-align: center;
+}

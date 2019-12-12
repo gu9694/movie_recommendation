@@ -1,0 +1,39 @@
+.logo{
+    width: 50px;
+}
+
+body{
+    background-color: #f3f3f3;
+}
+
+
+html,body{
+    font-size: 12px;
+    font-family:"Arial";
+	background-image:url('../images/titan.jpg');
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+
+
+.main{
+    background: #fff;
+    opacity: 0.7;
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding : 10px;
+}
+
+.poster{
+    width: 180px;
+}
+
+.caption{
+    text-align: center;
+    font-size: 20px;
+}
+.btn{
+    opacity: 1;
+}
