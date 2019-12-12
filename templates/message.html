@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block title%}Homepage{%endblock%}
+
+{%block head%}
+<link rel='stylesheet' href="{{url_for('static',filename='css/message.css')}}">
+
+{%endblock%}
+
+
+{%block main%}
+{%if just_rate%}
+    <div class="alert alert-success" role="alert">Well done! You successfully submitted your ratings</div>
+    <p><a class="btn btn-primary btn-lg" href="{{url_for('result')}}" role="button">See result</a></p>
+
+{%endif%}
+{%endblock%}

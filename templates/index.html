@@ -1,0 +1,56 @@
+{%extends 'base.html'%}
+{%block title%}Homepage{%endblock%}
+
+{%block head%}
+<link rel='stylesheet' href="{{url_for('static',filename='css/index.css')}}">
+
+{%endblock%}
+
+
+{%block main_head%}
+
+
+{%if not just_rate%}
+
+
+
+
+
+
+
+<div class="jumbotron" id="first" style="height: 740px;margin-top: 0%; margin-bottom: 0%;">
+        <div class="container" id="first_container">
+        <h1 style="color:white;">STEP1: Rate Our Movie</h1>
+        <p>...</p>
+        <p><a class="btn btn-primary btn-lg" href="{{url_for('login') if user_id else url_for('rate_movies')}}" role="button">START</a></p>
+    </div>
+    </div>
+<div class="jumbotron" id='second' style="height: 740px;margin-top: 0%; margin-bottom: 0%;">
+        <div class="container" id="second_container">
+        <h1 style="color:white;">STEP2: Find Your Movie</h1>
+        <p>...</p>
+        <p><a class="btn btn-primary btn-lg" href="{{url_for('login') if user_id else url_for('result')}}" role="button">START</a></p>
+    </div>
+    
+</div>
+      
+<div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+          <span class="sr-only">45% Complete</span>
+        </div>
+      </div>
+
+{%endif%}
+{%endblock%}
+
+{%block main%}
+This homepage
+
+{%if just_rate%}
+    <div class="alert alert-success" role="alert">Well done! You successfully submitted your ratings</div>
+    <p><a class="btn btn-primary btn-lg" href="{{url_for('result')}}" role="button">See result</a></p>
+
+{%endif%}
+
+
+{%endblock%}

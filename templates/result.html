@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+{%block title%}Rate Movie{%endblock%}
+{%block head%}
+<link rel='stylesheet' href="{{url_for('static',filename='css/result.css')}}">
+<script src="{{url_for('static',filename='js/login_signup.js')}}"></script>
+{%endblock%}
+{%block main%}
+<div class="list-group">
+        <a href="#" class="list-group-item active">
+          YOUR NEW MOVIE LIST
+        </a>
+        {%for i in range(10)%}
+        <a href="{{movieUrl[recommendP[i].product]}}" class="list-group-item"><span class="badge">{{'{:.1f}'.format(recommendP[i].rating)}}</span>{{movieTitle[recommendP[i].product]}}</a>
+        {%endfor%}
+        <!-- <a href="#" class="list-group-item"><span class="badge">14</span>Morbi leo risus</a>
+        <a href="#" class="list-group-item"><span class="badge">14</span>Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item"><span class="badge">14</span>Vestibulum at eros</a> -->
+</div>
+{%endblock%}

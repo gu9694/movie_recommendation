@@ -1,0 +1,71 @@
+{%extends 'base.html'%}
+{%block title%}Rate Movie{%endblock%}
+{%block head%}
+<link rel='stylesheet' href="{{url_for('static',filename='css/rate_movies.css')}}">
+<script src="{{url_for('static',filename='js/login_signup.js')}}"></script>
+{%endblock%}
+{%block main%}
+
+
+<!-- <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img class='poster' src="{{url_for('static',filename='images/ddd_4.png')}}" alt="">
+          </a>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+                <a href="#" class="thumbnail">
+                  <img class='poster' src="{{url_for('static',filename='images/ddd_4.png')}}" alt="">
+                </a>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img class='poster' src="{{url_for('static',filename='images/ddd_4.png')}}" alt="">
+            </a>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+                <a href="#" class="thumbnail">
+                    <img class='poster' src="{{url_for('static',filename='images/ddd_4.png')}}" alt="">
+                </a>
+        </div>
+        
+        
+</div> -->
+<h3 class="page-title">Rate Movie</h3>
+<form action="" method='POST'>
+<div class="form-container">
+<div class="row">
+    {%for i in range(16)%}
+        <div class="col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img class='poster' src="{{df.iloc[i].img_url}}" alt="">
+            <div class="caption">
+              <h3>{{df.iloc[i].movie_title}}</h3>
+              
+              <div class='form-group'>
+                    <input type="text" class='form-control' placeholder="rate from 1~5, default 2.5 stars" name='{{df.iloc[i].movie_id}}'>
+                </div>
+            </div>
+          </div>
+        </div>
+    {%endfor%}
+</div>
+
+
+<div class="form-group">
+        <button class="btn btn-primary btn-block">SUBMIT</button>
+</div>
+</div>
+</form>
+
+<!-- <div class="icons mui-inline kps">
+        <i data-index="1" class="mui-icon mui-icon-star"></i>
+        <i data-index="2" class="mui-icon mui-icon-star"></i>
+        <i data-index="3" class="mui-icon mui-icon-star"></i>
+        <i data-index="4" class="mui-icon mui-icon-star"></i>
+        <i data-index="5" class="mui-icon mui-icon-star"></i>
+    </div> -->
+{%endblock%}
